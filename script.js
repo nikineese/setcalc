@@ -78,7 +78,7 @@ function deleteAB(){
     arrayB = Array.from(new Set(arrayB))
     fixArr = arrayA
     if (JSON.stringify(arrayA) === JSON.stringify(arrayB)){
-        return "0"
+        return ""
     }
     for (let i = 0; i <= getMaxLength(arrayA,arrayB); i++){
         if (arrayA.includes(arrayB[i])) {
@@ -97,7 +97,7 @@ function deleteBA(){
     let arrayB = inputB.value.split('') || []
     fixArr = arrayB
     if (JSON.stringify(arrayA) === JSON.stringify(arrayB)){
-        return "0"
+        return ""
     }
     for (let i = 0; i <= getMaxLength(arrayA,arrayB); i++){
         if (arrayB.includes(arrayA[i])) {
