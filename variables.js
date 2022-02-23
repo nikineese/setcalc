@@ -1,0 +1,5 @@
+export const inputA = document.querySelector('.arrayA')
+export const inputB = document.querySelector('.arrayB')
+export const button = document.querySelectorAll('.button')
+export const result = document.querySelectorAll('.result')
+export const reset = document.querySelector('.reset')

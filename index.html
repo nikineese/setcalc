@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Laba</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
+    *{
+        font-family: Comfortaa, sans-serif;
+
+    }
+    body{
+        text-align: center;
+        margin-top: 40px;
+        background: radial-gradient(circle,cornflowerblue,royalblue);
+
+    }
+    .container{
+        padding: 30px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 800px;
+        background-color: antiquewhite;
+    }
+    .hide{
+        display: none;
+    }
+    .button{
+        box-sizing: border-box;
+        width: 110px;
+        height: 50px;
+        text-align: center;
+        background-color: lightblue;
+        outline: none;
+        border: 1px solid lightcyan;
+        transition: 0.3s scale ease-in-out;
+    }
+    .button:active{
+        transform: scale(0.8);
+    }
+    .buttons{
+        margin-left: 210px;
+        width: 200px;
+        margin-top: 20px;
+        display: grid;
+        gap: 20px;
+        grid-template-columns: repeat(3,1fr);
+    }
+    .result{
+        color: darkslateblue;
+    }
+</style>
+<body>
+<div class="container">
+<input placeholder="Множина А" class="input arrayA" type="text">
+<input placeholder="Множина B" class="input arrayB" type="text">
+<div class="buttons">
+<button class="button">Об'єднати</button>
+<button class="button">Перетин</button>
+<button class="button">a-b</button>
+<button class="button">b-a</button>
+<button class="button">Симетрична різниця</button>
+<button class="button reset">Очистити значення</button>
+</div>
+<br>
+<p>Об'єднана множина: <span class="hide result"></span></p>
+<p>Перетин множин: <span class="hide result"></span></p>
+<p>Різниця множин a і b: <span class="hide result"></span></p>
+<p>Різниця множин b і a: <span class="hide result"></span></p>
+<p>Симетрична множина: <span class="hide result"></span></p>
+</div>
+<script type="module" src="script.js"></script>
+</body>
+</html>
