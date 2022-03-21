@@ -61,7 +61,7 @@ function isCrossing(){
     arrayA = Array.from(new Set(arrayA))
     arrayB = Array.from(new Set(arrayB))
     let newArray = []
-    for (let i = 0 ; i < getMaxLength(arrayA, arrayB); i++){
+    for (let i = 0 ; i <= getMaxLength(arrayA, arrayB); i++){
         if (arrayA.includes(arrayB[i])){
             newArray.push(arrayB[i])
         }
@@ -80,7 +80,7 @@ function deleteAB(){
     if (JSON.stringify(arrayA) === JSON.stringify(arrayB)){
         return ""
     }
-    for (let i = 0; i <= getMaxLength(arrayA,arrayB); i++){
+    for (let i = 0; i < getMaxLength(arrayA,arrayB); i++){
         if (arrayA.includes(arrayB[i])) {
             arrayA = arrayA.filter((n) => {
                 return n !== arrayB[i]
